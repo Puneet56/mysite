@@ -33,11 +33,14 @@ function draw() {
 		text("GAME OVER", 5, 400);
 	}
 }
-
 function keyPressed() {
 	if (key == " ") {
 		bird.up();
 	}
+}
+
+function mousePressed() {
+	bird.up();
 }
 
 function gameOver() {

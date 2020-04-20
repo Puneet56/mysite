@@ -1,31 +1,31 @@
-var l1 = 300;
-var l2 = 300;
+var l1 = 150;
+var l2 = 150;
 var x1;
 var y1;
 var x2;
 var y2;
-var m1 = 50;
-var m2 = 50;
+var m1 = 25;
+var m2 = 25;
 var a1;
 var a2;
 var v1 = 0;
 var v2 = 0;
 var ac1 = 0;
 var ac2 = 0;
-var g = 1;
+var g = 0.7;
 var tracing = [];
 function setup() {
-	a1 = PI / 2;
-	a2 = PI / 2;
+	a1 = PI / 1.5;
+	a2 = PI / 1.5;
 
-	createCanvas(1500, 1500);
+	createCanvas(750, 750);
 }
 
 function draw() {
 	background(0);
 	stroke(255);
-	strokeWeight(4);
-	translate(width / 2, 500);
+	strokeWeight(2);
+	translate(width / 2, 300);
 	x1 = l1 * sin(a1);
 	y1 = l1 * cos(a1);
 
