@@ -1,3 +1,5 @@
+var slider1;
+var slider2;
 var l1 = 150;
 var l2 = 150;
 var x1;
@@ -15,10 +17,13 @@ var ac2 = 0;
 var g = 0.7;
 var tracing = [];
 function setup() {
-	a1 = PI / 1.5;
-	a2 = PI / 1.5;
-
 	createCanvas(750, 750);
+	slider1 = createSlider(0, PI, (3 * PI) / 4, 0.01);
+	console.log(slider1.value);
+	slider2 = createSlider(0, PI, (3 * PI) / 4, 0.01);
+	console.log(slider2.value);
+	a1 = slider1.value();
+	a2 = slider2.value();
 }
 
 function draw() {
@@ -26,6 +31,7 @@ function draw() {
 	stroke(255);
 	strokeWeight(2);
 	translate(width / 2, 300);
+
 	x1 = l1 * sin(a1);
 	y1 = l1 * cos(a1);
 
